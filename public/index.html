@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="讓全班即時分享想法的課堂文字雲" />
+    <meta name="theme-color" content="#0d2538" />
+    <title>課堂即時文字雲</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">雲</span>
+          <div>
+            <p class="eyebrow">全班共創</p>
+            <h1>課堂即時文字雲</h1>
+          </div>
+        </div>
+        <div class="connection" id="connection" role="status" aria-live="polite">
+          <span class="connection-dot"></span>
+          <span>連線中…</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="cloud-panel" aria-labelledby="cloud-title">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">LIVE RESULTS</p>
+              <h2 id="cloud-title">大家正在想什麼？</h2>
+            </div>
+            <div class="response-count">
+              <strong id="response-count">0</strong>
+              <span>份回應</span>
+            </div>
+          </div>
+
+          <div class="word-cloud" id="word-cloud" aria-live="polite">
+            <div class="empty-state" id="empty-state">
+              <span aria-hidden="true">✦</span>
+              <p>還沒有關鍵字</p>
+              <small>送出第一個想法，讓文字雲開始生長。</small>
+            </div>
+          </div>
+
+          <div class="legend" aria-label="文字大小說明">
+            <span><i class="legend-small"></i>較少人提到</span>
+            <span><i class="legend-large"></i>較多人提到</span>
+          </div>
+        </section>
+
+        <aside class="input-panel">
+          <div class="input-copy">
+            <p class="section-label">提交你的想法</p>
+            <h2>一個關鍵字就好</h2>
+            <p>輸入你最想分享的詞彙，送出後會立即出現在全班畫面上。</p>
+          </div>
+
+          <form id="word-form">
+            <label for="word-input">我的關鍵字</label>
+            <div class="input-wrap">
+              <input
+                id="word-input"
+                name="word"
+                type="text"
+                maxlength="20"
+                autocomplete="off"
+                placeholder="例如：好奇、合作、勇氣"
+                required
+              />
+              <span class="char-count"><span id="char-count">0</span>/20</span>
+            </div>
+            <button id="submit-button" type="submit">
+              <span>送出到文字雲</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="privacy-note">
+            <span aria-hidden="true">◌</span>
+            <p><strong>課堂小提醒</strong><br />請勿輸入姓名、學號或其他個人資料。</p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

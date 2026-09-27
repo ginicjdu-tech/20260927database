@@ -1,0 +1,25 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "hosting": {
+    "site": "database-eb5b8",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      }
+    ]
+  }
+}

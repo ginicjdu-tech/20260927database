@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /wordcloud_words/{document} {
+      // 僅適合課堂 demo；正式學生資料或長期公開服務需改用驗證規則。
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['word', 'normalized', 'createdAt'])
+        && request.resource.data.word is string
+        && request.resource.data.word.size() >= 1
+        && request.resource.data.word.size() <= 20
+        && request.resource.data.normalized is string
+        && request.resource.data.normalized.size() >= 1
+        && request.resource.data.normalized.size() <= 20
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
