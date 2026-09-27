@@ -11,7 +11,7 @@
 - Firebase 資料庫可正常操作。
 - `wordcloud_words` 允許公開讀取及受格式限制的新增；禁止前端更新與刪除。
 - 即時文字雲網頁已佈署：`https://database-eb5b8.web.app`
-- GitHub CLI 已登入，即將建立遠端 repository 並完成首次 push。
+- GitHub 私人 repository 已建立並完成首次 push：`https://github.com/ginicjdu-tech/20260927database`
 - Obsidian Secondbrain、專案駕駛艙與 MCP 跨專案讀寫均已設定並測試成功。
 
 ## ➡️ 下一步
@@ -31,4 +31,4 @@
 
 - 時間：2026-09-28
 - 更新者：Codex @ GINI
-- Git push：待本次首次 push 完成
+- Git push：已推送至 `origin/main`
