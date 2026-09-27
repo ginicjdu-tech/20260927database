@@ -26,3 +26,4 @@ build/
 
 # Firebase CLI 本機紀錄
 firebase-debug.log
+.firebase/
