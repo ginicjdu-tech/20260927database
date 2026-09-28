@@ -14,6 +14,7 @@
 - 已部署 `firestore.rules`
 - 已建立即時文字雲網頁
 - 網頁原始碼位於 `public/`
+- GitHub 公開 repository：`https://github.com/ginicjdu-tech/20260927database`
 
 ## 主要檔案
 

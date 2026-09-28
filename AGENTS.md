@@ -18,7 +18,7 @@
 - [x] 建立專案工作模式與本機 Git 儲存庫
 - [x] 製作第一個班級互動工具（即時文字雲）
 - [ ] 正式使用前，將公開寫入規則改為登入、班級碼或教師管理條件
-- [ ] 視需要連接 GitHub 與 Obsidian
+- [x] 連接 GitHub 與 Obsidian
 
 ## 資料夾結構
 
@@ -35,7 +35,7 @@
 | 層級 | 平台 | 位置 | 讀取時機 |
 |------|------|------|---------|
 | L1 | 本地（Google 雲端硬碟） | `AGENTS.md`＋`handoff.md` | 每個工作階段 |
-| L2 | GitHub | CLI 已登入；遠端 repository 尚未建立 | 指定時 |
+| L2 | GitHub | `https://github.com/ginicjdu-tech/20260927database`（公開） | 指定時 |
 | L3 | Obsidian | `G:\我的雲端硬碟\Secondbrain\20260927database\專案工作流程.md` | 有需要時 |
 
 ## 專案入口
